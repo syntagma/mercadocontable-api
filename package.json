@@ -1,0 +1,41 @@
+{
+  "name": "mercadocontable-api",
+  "version": "0.0.0",
+  "description": "API para MercadoContable.com",
+  "homepage": "api.mercadocontable.com",
+  "bugs": "https://github.com/syntagma/mercadocontable-api/issues",
+  "author": "Syntagma SA <info@syntag.ma>",
+  "license": "MIT",
+  "main": "server.js",
+  "files": [
+    "server.js",
+    "lib",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/syntagma/mercadocontable-api"
+  },
+  "keywords": [
+    "mercadocontable-api"
+  ],
+  "dependencies": {
+    "express": "^4.13.3"
+  },
+  "devDependencies": {
+    "coveralls": "^2.11.2",
+    "istanbul": "^0.3.8",
+    "tape": "^4.0.1",
+    "tap-spec": "^4.0.2",
+    "gaze-cli": "^0.2.0",
+    "standard": "^4.5.0"
+  },
+  "scripts": {
+    "prepublish": "npm run lint && npm test",
+    "istanbul": "istanbul cover test/server.js",
+    "lint": "standard",
+    "test": "node test/server.js | tap-spec",
+    "test:watch": "gaze 'npm test' 'test/**/*.js' 'lib/**/*.js' 'server.js'",
+    "start": "npm run test:watch"
+  }
+}
