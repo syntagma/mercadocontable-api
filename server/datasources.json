@@ -1,0 +1,15 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "postgresql": {
+    "host": "mercadocontable.cmdb03agwzjb.us-east-1.rds.amazonaws.com",
+    "port": 5432,
+    "database": "mercadocontabledev",
+    "username": "mercadocontable",
+    "password": "mercadocontable",
+    "name": "postgresql",
+    "connector": "postgresql"
+  }
+}

@@ -1,41 +1,27 @@
 {
   "name": "mercadocontable-api",
-  "version": "0.0.0",
-  "description": "API para MercadoContable.com",
-  "homepage": "api.mercadocontable.com",
-  "bugs": "https://github.com/syntagma/mercadocontable-api/issues",
-  "author": "Syntagma SA <info@syntag.ma>",
-  "license": "MIT",
-  "main": "server.js",
-  "files": [
-    "server.js",
-    "lib",
-    "LICENSE"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/syntagma/mercadocontable-api"
+  "version": "1.0.0",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node .",
+    "pretest": "jshint ."
   },
-  "keywords": [
-    "mercadocontable-api"
-  ],
   "dependencies": {
-    "express": "^4.13.3"
+    "compression": "^1.0.3",
+    "cors": "^2.5.2",
+    "loopback": "^2.22.0",
+    "loopback-boot": "^2.6.5",
+    "loopback-component-explorer": "^2.1.0",
+    "loopback-connector-postgresql": "^2.4.0",
+    "loopback-datasource-juggler": "^2.39.0",
+    "serve-favicon": "^2.0.1"
   },
   "devDependencies": {
-    "coveralls": "^2.11.2",
-    "istanbul": "^0.3.8",
-    "tape": "^4.0.1",
-    "tap-spec": "^4.0.2",
-    "gaze-cli": "^0.2.0",
-    "standard": "^4.5.0"
+    "jshint": "^2.5.6"
   },
-  "scripts": {
-    "prepublish": "npm run lint && npm test",
-    "istanbul": "istanbul cover test/server.js",
-    "lint": "standard",
-    "test": "node test/server.js | tap-spec",
-    "test:watch": "gaze 'npm test' 'test/**/*.js' 'lib/**/*.js' 'server.js'",
-    "start": "npm run test:watch"
-  }
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "description": "mercadocontable-api"
 }
